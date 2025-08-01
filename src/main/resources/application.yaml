@@ -1,0 +1,26 @@
+server:
+  port: 8081
+  host: 0.0.0.0
+
+
+agent:
+  ollama:
+    url: "http://localhost:11434"
+    llm_model_name: "hf.co/bartowski/DeepSeek-R1-Distill-Qwen-14B-GGUF:Q8_0"
+#    llm_model_name: "deepseek-r1:7b"
+#    llm_model_name: "llama3.1:8b"
+#    llm_model_name: "phi4"
+    embedding_model_name: "snowflake-arctic-embed2"
+
+  opensearch:
+    url: "http://localhost:30311"
+    ollama_index_name: "ollama-vector-db"
+
+  rag:
+    source: "/Users/srusen/Documents/RAG"
+    run_embedding: false
+
+  streaming:
+    end_of_stream_token: "[DONE]"
+
+
